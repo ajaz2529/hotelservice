@@ -1,11 +1,10 @@
 package com.hotelservice.controller;
 
 import com.hotelservice.entity.Hotel;
-import com.hotelservice.servive.HotelService;
+import com.hotelservice.service.HotelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -48,10 +47,11 @@ public class HotelController {
 
         }catch(Exception e){
             e.printStackTrace();
-            return new ResponseEntity<>( HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>( HttpStatus.NOT_FOUND);
         }
 
     }
+
 
 
 }
